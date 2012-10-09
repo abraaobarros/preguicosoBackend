@@ -1,0 +1,56 @@
+<%= form_for @item_cardapio, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :name_pt, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :name_pt, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :name_en, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :name_en, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :description_pt, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :description_pt, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :description_en, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :description_en, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :key, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :key, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :price, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :price, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :category, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :category, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :estabelecimento_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :estabelecimento_id, :class => 'text_field' %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                item_cardapios_path, :class => 'btn' %>
+  </div>
+<% end %>

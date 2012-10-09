@@ -1,0 +1,35 @@
+<%- model_class = ItemCardapio -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:name_pt) %>:</strong></dt>
+  <dd><%= @item_cardapio.name_pt %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:name_en) %>:</strong></dt>
+  <dd><%= @item_cardapio.name_en %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:description_pt) %>:</strong></dt>
+  <dd><%= @item_cardapio.description_pt %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:description_en) %>:</strong></dt>
+  <dd><%= @item_cardapio.description_en %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:key) %>:</strong></dt>
+  <dd><%= @item_cardapio.key %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:price) %>:</strong></dt>
+  <dd><%= @item_cardapio.price %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:category) %>:</strong></dt>
+  <dd><%= @item_cardapio.category %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:estabelecimento_id) %>:</strong></dt>
+  <dd><%= @item_cardapio.estabelecimento_id %></dd>
+</dl>
+
+<div class="form-actions">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              item_cardapios_path, :class => 'btn'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_item_cardapio_path(@item_cardapio), :class => 'btn' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              item_cardapio_path(@item_cardapio),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
